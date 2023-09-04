@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg text-white " id="naving">
+        <div class="container ">
+          <a class="navbar-brand text-white" href="#home">Bootstrap5</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-5">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#service">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#carouselExampleIndicators">Comment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-white" id="main">
+        <div class="container pt-5">
+            <div class="row ">
+                <div class="col-sm-7 mt-5">
+                    <h1 class="mb-4 fst-italic">Give Wings to Your Career With Tech-Powered,Job-Oriented Courses.</h1>
+                    <p class="fst-italic text-white-50">A list of top NodeJS interview questions and answers for both freshers & experienced candidates to prepare and boost chances of selection..</p>
+                    <p class="fst-italic mb-5 text-white-50">Explore the most comprehensive set of interview questions that are frequently asked by companies/employers:..</p>
+                    <button class="btn btn-outline-primary  px-5 mb-4 mx-3"><i class="fa-brands fa-google-play"></i> Explore Now</button>
+                    <button class="btn btn-outline-warning  px-5 mb-4 mx-4"><i class="fa-regular fa-circle-play"></i> Book Free Class</button>
+                </div>
+                <div class="col-sm-5 ">
+                  <img src="https://history-computer.com/wp-content/uploads/2022/11/shutterstock_2111828198-scaled.jpg" alt="" class="img-fluid pt-5">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,224L34.3,197.3C68.6,171,137,117,206,112C274.3,107,343,149,411,144C480,139,549,85,617,80C685.7,75,754,117,823,112C891.4,107,960,53,1029,53.3C1097.1,53,1166,107,1234,144C1302.9,181,1371,203,1406,213.3L1440,224L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg> -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,240C384,245,480,203,576,165.3C672,128,768,96,864,122.7C960,149,1056,235,1152,245.3C1248,256,1344,192,1392,160L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+     <div class="container" id="secondCon">
+      <div class="row justify-content-center" >
+        <div class="col-sm-6">
+          <h4 class="fst-italic fw-bold fs-1 text-center">What Will Be Do For Your Business.</h4>
+        </div>
+      </div>
+     </div> 
+
+     <div class="container mt-5" id="SecondCount">
+      <div class="row mb-4 justify-content-center">
+        <div class="col-sm-3 col-sm-6 col-lg-3 mb-4">
+          <div class="card border-0 text-center shadow-lg">
+            <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold fst-italic">Content Marketing</h5>
+              <p class="card-text">card title and make up the bulk of the card's content Some quick example text to build on the .</p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <button class="btn btn-primary rounded-5 "><i class="fa-solid fa-arrow-right text-center"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-sm-6 col-lg-3 mb-4">
+          <div class="card border-0 text-center shadow-lg">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWd3vbXUzlCE1wqp9TTkDmTVaSJUyPhPSSMg&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold fst-italic">Link Bulding</h5>
+              <p class="card-text">example text to build on the Some quick  card title and make up Some quick  content.</p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <button class="btn btn-primary rounded-5 justify-content-center"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-sm-6 col-lg-3 mb-4">
+          <div class="card border-0 text-center shadow-lg" >
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR002fG9SvC9WrWDrwZp75-YJ5PGl9ne6sGKw&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold fst-italic">On Page SEO</h5>
+              <p class="card-text">make up the bulk of the card's content Some quick  make up the bulk of  text to build on the card title and examples.</p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <button class="btn btn-primary rounded-5"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-sm-6 col-lg-3 mb-4">
+          <div class="card border-0 text-center shadow-lg">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9OcViaVe52bM8Dmi9BWguwg4EpbmaWYMye6_r0OFwsjh6GUx61btNpMHMaxw222Lkn6w&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold fst-italic">Web Designing</h5>
+              <p class="card-text">Some quick example text to build make up the bulk of make up the bulk of make up the bulk of on the card title and make up the bulk of the card's content.</p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <button class="btn btn-primary rounded-5"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+
+     <div class="container-fluid bg-dark text-white opacity-80">
+      <div class="container">
+        <div class="row ">
+          <div class="col-sm-6 mt-5">
+            <img src="https://media.istockphoto.com/id/1315891458/photo/two-smartphones-with-blank-screen-soaring-on-dark-background.webp?b=1&s=170667a&w=0&k=20&c=u24AMioVZp9XFPBjyGzZAZSPkENrjxoYQLIV-OPnqDk=" alt="" class="img-fluid bg-dark">
+          </div>
+          <div class="col-sm-5 mt-5">
+            <h3 class="fw-bold fst-italic fs-1 mb-4">Step To Build A Successful Digital Product.</h3>
+            <p class="text-white-50 mb-4 fst-italic">Well-curated basic to advanced interview questions on SEO, categorized into freshers and experienced professionals. Also, find tips to fast-track a career in SEO. Explore the most comprehensive set of interview questions that are frequently asked by companies/employers:</p>
+            <button class="btn px-5 btn-outline-secondary mb-5 mx-4"><i class="fa-solid fa-phone"></i> Contact Us</button>
+            <button class="btn px-5 btn-outline-info mb-5 mx-4"><i class="fa-solid fa-thumbs-up"></i> Like This Page...</button>
+          </div>
+        </div>
+      </div>
+     </div>
+
+     <div class="container mt-5 mb-5">
+      <h1 class="text-center fst-italic fw-bold mb-5" id="service">Genrating New Customber Via Online Mode Service</h1>
+      <div class="row">
+        <div class="col-sm-6 col-md-6  my-2 ">
+          <div class="card mb-3 shadow-lg" >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/005/868/051/small/digital-marketing-modern-flat-concept-for-web-banner-design-woman-marketer-working-online-on-laptop-and-posting-promotional-content-on-social-media-illustration-with-isolated-people-scene-free-vector.jpg" class="img-fluid rounded-start" alt="...">
+                <!-- <h1><i class="fa-solid fa-mobile"></i></h1> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Socal Media Advertising</h5>
+                  <p class="card-text">additional content. This content is a little bit longer This is a wider card with supporting text below as a natural lead-in to .</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6  my-2">
+          <div class="card mb-3 shadow-lg" >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAgRw607MtZDSQGeoBdGLUE_lgrdvq0FhiUA&usqp=CAU" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fw-bolder">Influencer Marketing</h5>
+                  <p class="card-text">card with  is a wider  bit longer below as a natural lead-in to supporting text Thise .</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 13 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6  my-2">
+          <div class="card mb-3 shadow-lg " >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://assets.entrepreneur.com/content/3x2/2000/1597865857-GettyImages-1151307397.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Content Marketing</h5>
+                  <p class="card-text">lead-in to additional content. This content is a little bit longer This is a wider card with supporting text below as a natural .</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 45 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 my-2">
+          <div class="card mb-3 shadow-lg" >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://www.patternshiring.com/wp-content/uploads/2021/10/Untitled-design-2.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Referral Programs</h5>
+                  <p class="card-text">This content is a little bit longer, This is a wider card with  lead-in to additional content.  supporting text below as a natural.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 30 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide bg-dark">
+      <div class="carousel-indicators ">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container my-5 mb-5">
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0z0Bat6pPfzSz3Xm0P68WzXFvCUwY6fjSPQ&usqp=CAU" class="card-img-top rounded " alt="...">
+                  
+                  <div class="card-body ">
+                    <h5 class="card-title">@Angel$!_v</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT35Sk9mMEcBuooCRGNUylcYn-PR6IZhDHzvA&usqp=CAU" class="card-img-top rounded " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">@-Intro.21</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0fM7b24vgCIxfcq2LY6ipjbFaGQAo0c1WFA&usqp=CAU" class="card-img-top rounded " alt="...">
+                  <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0z0Bat6pPfzSz3Xm0P68WzXFvCUwY6fjSPQ&usqp=CAU" class="card-img-top rounded " alt="..."> -->
+                  <div class="card-body">
+                    <h5 class="card-title">*mants@!23</h5>
+                    <p class="card-text">Some build on the card title quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy0K_ljDsIcf5_6uUoN1yHMsfK9dOm13ac1w&usqp=CAU" class="card-img-top rounded" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title fst-italic">@Minpal5</h5>
+                    <p class="card-text">Some quick example text to build on the card build on the card title title and make up make up the bulk the bulk build on the card title of the card's content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container my-5 mb-5">
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6b4EOx7ysCVbhIujYl8R65V3FPa_GChmzUA&usqp=CAU" class="card-img-top rounded " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">$Wingo@.Ybl</h5>
+                    <p class="card-text">Some quick example text make up the bulk to build on the card title and make up the bulk ofexample text to build on the card title and make up the bulk.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="data:image/jpeg;base64,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" class="card-img-top rounded " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">@x-Maunty</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0z0Bat6pPfzSz3Xm0P68WzXFvCUwY6fjSPQ&usqp=CAU" class="card-img-top rounded " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">!@shape20</h5>
+                    <p class="card-text">Some quick example text to build on the card title card's card title and make content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy0K_ljDsIcf5_6uUoN1yHMsfK9dOm13ac1w&usqp=CAU" class="card-img-top rounded" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Sumit@20</h5>
+                    <p class="card-text">Some quick example text to build card  card title build on the card title and make card title and make card title and make of the card's content card title and make.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container mt-5 mb-5">
+            <div class="row">
+              <div class=" col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy0K_ljDsIcf5_6uUoN1yHMsfK9dOm13ac1w&usqp=CAU" class="card-img-top rounded" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">x-@0Moni_Vac</h5>
+                    <p class="card-text">Some quick example text to build on the card text make up the bulk to build on the card title and make up the bulk ofexample text to build on the card titl title and make up the bulk of the card's content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0z0Bat6pPfzSz3Xm0P68WzXFvCUwY6fjSPQ&usqp=CAU" class="card-img-top rounded " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">@v-Sonu</h5>
+                    <p class="card-text">Some quick example text make up the bulk to build on the card title and make up the the card titl text to build.</p>
+                    <p class="text-warning text-center"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6b4EOx7ysCVbhIujYl8R65V3FPa_GChmzUA&usqp=CAU" class="card-img-top rounded " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">$Wingo@.Ybl</h5>
+                    <p class="card-text">Some quick example text make up the bulk to build on the card title and make up the bulk ofexample text to build on the card title and make up the bulk.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+                <div class="card bg-black text-white" >
+                  <img src="data:image/jpeg;base64,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" class="card-img-top rounded " alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">@420preet</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+     
+      
+      
+  <div class="container my-5" >
+    <h1 class="text-center fst-italic fw-bold fs-4 text-primary mb-4">Tips And Tricks From Our Experts.</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+        <div class="card shadow" id="i">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI9raZVUmu4vsu96v3Q6wuOADtOxN1dapgWg&usqp=CAU" alt="" class="img-fluid card-img-top">
+          <div class="card-body">
+            <h4 class="card-title  fst-italic">Live Online Course.</h4>
+            <p class="card-text">certification,hands-on Live Classes highest instant project, and Online Courses With regular Live Classes by Professional mentors, user job assistance.</p>
+            <h6 class="text-danger">Get Started <i class="fa-solid fa-right-long  mx-2"></i></h6>
+          </div>
+          <!-- <a href="" class="btn btn-outline-danger text-warning my-1">Book Now <i class="fa-solid fa-circle-play"></i></a> -->
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3 my-2">
+        <div class="card shadow" id="i">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlUU71cNtwdmlMGOb0HyKDjf1eg8lQZHEvSw&usqp=CAU" alt="" class="img-fluid card-img-top">
+          <div class="card-body mb-2">
+            <h5 class="card-title fst-italic">Class Room/Ofline Course.</h5>
+            <p class="card-text">Online Courses With regular Live Classes by Professional mentors, The highest rated online courses and MOOCs of all time by Class client users..</p>
+            <h6 class="text-danger">Get Started <i class="fa-solid fa-right-long  mx-2"></i></h6>
+          </div>
+          <!-- <a href="" class="btn btn-outline-danger text-warning my-2">Book Now <i class="fa-solid fa-circle-play"></i></a> -->
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3 my-2" >
+        <div class="card shadow" id="i">
+          <img src="https://www.wscubetech.com/images/best-mern-stack-course-online.webp" alt="" class="img-fluid card-img-top">
+          <div class="card-body">
+            <h5 class="card-title  fst-italic">Mearn Stack Courses.</h5>
+            <p class="card-text">The highest rated Online Courses   online courses and MOOCs of all time by Class client users With user moniters regular Live Classes by Professional mentors..</p>
+            <h6 class="text-danger">Get Started <i class="fa-solid fa-right-long  mx-2"></i></h6>
+          </div>
+          <!-- <a href="" class="btn btn-outline-danger text-warning my-2">Book Now <i class="fa-solid fa-circle-play "></i></a> -->
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3 my-1">
+        <div class="card shadow" id="i">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwTg8Iqbkhm2l5ed-amJYCsVYraO7UJGleWw&usqp=CAU" alt="" class="img-fluid card-img-top rounded-top">
+          <div class="card-body ">
+            <h5 class="card-title  fst-italic">Front-End Dev Courses.</h5>
+            <p class="card-text">Live Classes by Professional mentors, Online Courses With regular  The highest rated online courses and MOOCs of all time by Class client users..</p>
+            <h6 class="text-danger">Get Started <i class="fa-solid fa-right-long mx-2"></i></h6>
+          </div>
+          <!-- <a href="" class="btn btn-outline-danger text-warning my-2">Book Now <i class="fa-solid fa-circle-play"></i></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="custom-shape-divider-top-1692017572">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+  <div class="container-fluid bg- bg-black" id="contact">
+    <div class="container">
+      <h1 class="text-white text-center mb-5 fst-italic fw-bold text-decoration-underline">Contact</h1>
+      <div class="row justify-content-center text-white pb-5 ">
+        <div class="col-sm-6">
+          <form id="registrationForm">
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- First Name -->
+            <div class=" mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+          </div>
+              </div>
+              <div class="col-sm-6">
+                <!-- Last Name -->
+          <div class=" mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+              </div>
+            </div>
+  
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+  
+            <!-- Password -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+  
+            <!-- Additional Comments (Textarea) -->
+            <div class="mb-3">
+                <label for="comments" class="form-label">Additional Comments</label>
+                <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+            </div>
+  
+            <!-- Validation Message -->
+            <div id="validationMessage" class="text-danger"></div>
+  
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-white">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block ">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+
+    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/manish.yafubansh"
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-facebook-f"></i
+        ></a>
+
+      <!-- Twitter -->
+      <a
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-twitter"></i
+        ></a>
+
+      <!-- Google -->
+      <a
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-google"></i
+        ></a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/official_manish_yadubansh/"
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-instagram"></i
+        ></a>
+    </div>
+    <!-- Grid column -->
+  </div>
+</section>
+<!-- Section: Copyright -->
+</div>
+<!-- Grid container -->
+</footer>
+<!-- Footer -->
+</div>
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="bg-dark text-white-50">
+    <div class="container text-center text-md-start ">
+      <!-- Grid row -->
+      <div class="row pt-5">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-light"></i>Company name
+          </h6>
+          <p class="fst-italic">
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none fw-bold fst-italic">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p class="fst-italic fw-bold"><i class="fas fa-home me-3 text-light"></i>Delhi NCR, DN 201304, IND</p>
+          <p class="fst-italic fw-bold">
+            <i class="fas fa-envelope me-3 text-light"></i>
+            Myn@gmail.com
+          </p>
+          <p class="fst-italic fw-bold"><i class="fas fa-phone me-3 text-light"></i> + 0001 2314 5687 8998</p>
+          <p class="fst-italic fw-bold"><i class="fas fa-print me-3 text-light"></i>  + 0001 1234 5677 8999</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4 bg-dark text-white">
+    © 2023 Copyright:
+    <a class="text-success fw-bold fst-italic " href="https://mdbootstrap.com/">Manish_yadav@.Com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+  
+
+
+
+
+<!-- JavaScript File -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
+</body>
+</html>
